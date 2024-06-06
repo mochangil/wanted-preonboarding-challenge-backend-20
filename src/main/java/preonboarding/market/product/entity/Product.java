@@ -70,5 +70,9 @@ public class Product extends BaseEntity {
 
     }
 
+    public boolean validateForSale(){
+        return ProductStatus.SALE.equals(this.status);
+    }
+
 
 }
