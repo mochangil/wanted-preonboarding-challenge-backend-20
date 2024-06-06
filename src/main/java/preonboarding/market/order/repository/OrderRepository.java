@@ -8,4 +8,5 @@ import preonboarding.market.product.entity.Product;
 import java.util.Optional;
 
 public interface OrderRepository extends JpaRepository<Orders,Long> {
+    Optional<Orders> findOrdersByProductId(Long productId);
 }
