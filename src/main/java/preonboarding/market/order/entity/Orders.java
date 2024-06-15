@@ -41,12 +41,13 @@ public class Orders extends BaseEntity {
         return Orders.builder()
                 .member(member)
                 .product(product)
-                .status(OrderStatus.BUYING)
+                .status(OrderStatus.RESERVED)
                 .build();
     }
     public enum OrderStatus{
-        BUYING("구매중"),
+        RESERVED("예약중"),
         CONFIRMED("구매확정"),
+        COMPLETE("구매완료")
         ;
 
         private final String status;

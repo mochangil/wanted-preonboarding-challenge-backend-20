@@ -9,12 +9,15 @@ import preonboarding.market.member.entity.Member;
 import preonboarding.market.member.repository.MemberRepository;
 import preonboarding.market.order.dto.request.OrderApprovalReqeustDto;
 import preonboarding.market.order.dto.request.OrderSaveRequestDto;
+import preonboarding.market.order.dto.response.OrderResponseDto;
 import preonboarding.market.order.entity.Orders;
 import preonboarding.market.order.repository.OrderRepository;
+import preonboarding.market.product.dto.response.ProductResponseDto;
 import preonboarding.market.product.entity.Product;
 import preonboarding.market.product.repository.ProductRepository;
 
 import java.util.ConcurrentModificationException;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -53,5 +56,21 @@ public class OrderService {
 
 
     }
+
+//    public OrderResponseDto getOrderHistory(Long memberId, Long productId){
+//        Product foundProduct = productRepository.findById(productId).orElseThrow(()->{
+//            throw new IllegalArgumentException("제품 정보가 존재하지 않습니다.");
+//        });
+//
+//        Optional<Orders> foundOrder = orderRepository.findOrderHistory(memberId,productId);
+//
+//        //Optional -> isPresent() 후 get()
+//        if (foundOrder.isPresent()) {
+//            OrderResponseDto orderResponseDto = new OrderResponseDto(foundOrder.get());
+//        }
+//        else{
+//
+//        }
+//    }
 
 }

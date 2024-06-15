@@ -17,6 +17,7 @@ import preonboarding.market.product.repository.ProductRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -72,10 +73,7 @@ public class ProductService {
 
 
         return new ProductDetailResponseDto(foundProduct.getName(),foundProduct.getPrice(),foundProduct.getStatus(),foundMember.getNickname(),foundOrder.getStatus());
-//        if (foundMember.getId().equals(foundProduct.getMember().getId())){
-//
-//        }
-    }
 
+    }
 
 }
