@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import preonboarding.market.member.entity.Member;
 
+import java.util.List;
+
 public record MemberSaveRequestDto(
         String email,
         String password,
